@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="co.merce.doorvoeringen.sendmail"
+    version="0.1.0">
+    <name>SendMail</name>
+    <description>SendMail Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>mail</keywords>
+    <asset src="www/SendMail.js" target="SendMail.js" />
+
+     <engines>
+        <engine name="cordova" version=">=2.3.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SendMail">
+                <param name="android-package" value="co.merce.doorvoeringen.SendMail"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/SendMail.java" target-dir="src/co/merce/doorvoeringen" />
+        <source-file src="src/android/Mail.java" target-dir="src/co/merce/doorvoeringen" />
+        
+     </platform>
+</plugin>
